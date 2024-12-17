@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "blurry-plugin-validate-meta-tags"
+version = "0.1.0"
+description = "A plugin to validate meta tags for best practices"
+authors = ["John Franey <1728528+johnfraney@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "blurry_plugin_validate_meta_tags"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+blurry-cli = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."blurry.html_plugins"]
+validate_meta_tags = 'blurry_plugin_validate_meta_tags:validate_meta_tags'
